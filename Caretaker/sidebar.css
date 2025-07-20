@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f8;
+    display: flex;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    width: 260px;
+    height: 100vh;
+    background-color: rgb(0, 0, 130);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 15px;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Avatar Section */
+  .avatar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .circle {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    color: rgb(0, 0, 130);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .username {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  /* Sidebar Content */
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Section Titles */
+  .sidebar-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #c0c0ff;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+  }
+  
+  /* Links */
+  .sidebar-link {
+    font-size: 14px;
+    color: #f0f0f0;
+    text-decoration: none;
+    margin-left: 28px;
+    margin-top: 5px;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .sidebar-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+  }
+  
+  /* Active Link */
+  .sidebar-link.active {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #00004d;
+    font-weight: bold;
+  }
+  
+  /* Logout Button */
+  .logout-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 14px;
+    color: #f0f0f0;
+    cursor: pointer;
+    margin-left: 28px;
+    margin-top: 5px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .logout-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin-left: 260px;
+    padding: 30px;
+    flex-grow: 1;
+  }
+  
+  /* Responsive Handling */
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+  
+    .main-content {
+      margin-left: 0;
+    }
+  }
+  

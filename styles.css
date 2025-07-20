@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 208px;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.sidebar-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #091814;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #4a5568;
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
+
+.collapsed .toggle-btn {
+    transform: rotate(0deg);
+}
+
+.sidebar-content {
+    margin-top: 12px;
+}
+
+.topic {
+    margin-bottom: 16px;
+}
+
+.topic h2 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #059669;
+    margin-bottom: 4px;
+}
+
+.subtopic a {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: normal;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+    position: relative;
+    background: none;
+    border-radius: 0;
+}
+
+.subtopic a .dot {
+    display: none;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #d1d5db;
+    margin-right: 10px;
+    transition: background 0.2s;
+}
+
+.subtopic a i {
+    margin-right: 0.5rem;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.subtopic a.active,
+.subtopic a:hover {
+    color: #2563eb;
+}
+
+.subtopic a.active i,
+.subtopic a:hover i {
+    color: #2563eb;
+}
+
+.subtopic a.active .dot,
+.subtopic a:hover .dot {
+    display: inline-block;
+    background: #2563eb;
+}
+
+.subtopic a:not(.active):hover .dot {
+    background: #2563eb;
+}
+
+.subtopic a:not(.active) .dot {
+    background: #d1d5db;
+}
+
+.subtopic a.active {
+    background: none;
+    border-radius: 0;
+    font-weight: bold;
+}
+
+.subtopic button {
+    all: unset;
+    display: none;
+}
+
+.collapsed {
+    transform: translateX(-176px);
+}
+
+.collapsed .toggle-btn {
+    position: absolute;
+    left: 176px;
+    top: 8px;
+    background-color: #059669;
+    color: white;
+    padding: 4px;
+    border-radius: 5px;
+}

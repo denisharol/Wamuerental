@@ -1,0 +1,91 @@
+.sidebar {
+    width: 190px;
+    background-color: #f8f9fa;
+    height: 100vh;
+    padding: 10px;
+    transition: width 0.3s;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sidebar-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.topic {
+    color: rgb(19, 19, 37);
+    margin-top: 15px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #ccc;
+}
+
+.topic h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.subtopic button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 13px;
+    transition: background-color 0.3s, color 0.3s;
+    color: black;
+    border-radius: 6px;
+}
+
+.subtopic button:hover {
+    background-color: rgb(10, 10, 28);
+    color: white;
+}
+
+.subtopic button i {
+    margin-right: 8px;
+}
+
+.subtopic button.active {
+    background-color: rgb(14, 14, 41);
+    color: white;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+    overflow: hidden;
+}
+
+.sidebar.collapsed .topic h2 {
+    display: none;
+}
+
+.sidebar.collapsed .subtopic button {
+    justify-content: center;
+    padding: 6px;
+}
+
+.sidebar.collapsed .subtopic button i {
+    margin-right: 0;
+}
